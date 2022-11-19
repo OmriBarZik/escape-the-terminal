@@ -10,7 +10,11 @@
     "prepare": "husky install"
   },
   "keywords": [],
-  "author": "",
+  "repository": {
+    "url": "https://github.com/OmriBarZik/escape-the-terminal",
+    "type": "git"
+  },
+  "author": "Omri Bar-Zik <omri@bar-zik.com>",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.28.0",
