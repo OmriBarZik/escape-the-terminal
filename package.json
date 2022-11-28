@@ -1,0 +1,28 @@
+{
+  "name": "escape-the-terminal",
+  "version": "1.0.0",
+  "description": "interactive escape the room for the terminal",
+  "main": "index.js",
+  "devDependencies": {
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
+    "prettier": "^2.8.0"
+  },
+  "scripts": {
+    "test": "shellcheck src/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmriBarZik/escape-the-terminal.git"
+  },
+  "author": "Omri Bar-Zik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmriBarZik/escape-the-terminal/issues"
+  },
+  "homepage": "https://github.com/OmriBarZik/escape-the-terminal#readme",
+  "lint-staged": {
+    "*": "prettier -uw",
+    "*.sh": "shellcheck"
+  }
+}
