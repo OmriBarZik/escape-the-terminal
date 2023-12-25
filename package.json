@@ -1,15 +1,26 @@
 {
   "name": "escape-the-terminal",
   "version": "1.0.0",
+  "type": "module",
   "description": "interactive escape the room for the terminal",
-  "main": "index.js",
+  "main": "src/index.js",
+  "module": "src/index.js",
   "devDependencies": {
+    "@types/vorpal": "^1.12.3",
+    "eslint": "^8.51.0",
+    "eslint-plugin-import": "^2.29.0",
     "husky": "^8.0.2",
-    "lint-staged": "^13.0.4",
+    "lint-staged": "^15.2.0",
     "prettier": "^2.8.0"
   },
+  "dependencies": {
+    "vorpal": "^1.12.0"
+  },
   "scripts": {
-    "test": "shellcheck src/**",
+    "start": "node ./src/index.js",
+    "test": "npm run lint",
+    "lint": "eslint . && prettier -c .",
+    "lint:fix": "eslint --fix . && prettier -w .",
     "prepare": "husky install"
   },
   "repository": {
@@ -24,6 +35,31 @@
   "homepage": "https://github.com/OmriBarZik/escape-the-terminal#readme",
   "lint-staged": {
     "*": "prettier -uw",
-    "*.sh": "shellcheck"
+    "*.js": "eslint --fix"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:import/recommended"
+    ],
+    "rules": {
+      "import/no-commonjs": "error",
+      "import/extensions": [
+        "error",
+        "always"
+      ],
+      "import/first": "error",
+      "import/exports-last": "error"
+    }
   }
 }

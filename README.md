@@ -13,5 +13,5 @@ docker run --it --rm omribarzik/escape-the-terminal
 To add new levels or fix bugs you find in the code run:
 
 ```sh
-sh ./develop.sh
+npm install
 ```
