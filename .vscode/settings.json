@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["Bringo"]
+  "cSpell.words": ["Bringo"],
+  "javascript.preferences.importModuleSpecifierEnding": "js"
 }

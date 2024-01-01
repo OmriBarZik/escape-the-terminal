@@ -9,11 +9,13 @@
     "@types/vorpal": "^1.12.3",
     "eslint": "^8.51.0",
     "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsdoc": "^47.0.2",
     "husky": "^8.0.2",
     "lint-staged": "^15.2.0",
     "prettier": "^2.8.0"
   },
   "dependencies": {
+    "memfs": "^4.6.0",
     "vorpal": "^1.12.0"
   },
   "scripts": {
@@ -48,12 +50,16 @@
     "parserOptions": {
       "sourceType": "module"
     },
+    "plugins": [
+      "jsdoc"
+    ],
     "extends": [
       "eslint:recommended",
       "plugin:import/recommended"
     ],
     "rules": {
       "import/no-commonjs": "error",
+      "jsdoc/no-undefined-types": "error",
       "import/extensions": [
         "error",
         "always"
